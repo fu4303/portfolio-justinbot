@@ -1,0 +1,24 @@
+{
+  "name": "justincarlson-io",
+  "version": "1.0.0",
+  "description": "https://justincarlson.io",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/justinbot/justincarlson-io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/justinbot/justincarlson-io/issues"
+  },
+  "homepage": "https://gitlab.com/justinbot/justincarlson-io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
