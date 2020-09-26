@@ -1,8 +1,16 @@
-// https://www.11ty.dev/docs/config/
+const yaml = require('js-yaml');
 
-module.exports = {
+/**
+ * See https://www.11ty.dev/docs/config/
+ */
+module.exports = (config) => {
+  // Support YAML data
+  config.addDataExtension('yml', (contents) => yaml.safeLoad(contents));
+
+  return {
     dir: {
-      input: "src",
-      output: "dist",
+      input: 'src',
+      output: 'dist',
     },
+  };
 };
