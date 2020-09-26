@@ -1,0 +1,5 @@
+# www.robotstxt.org
+
+# Allow all robots complete access
+User-agent: *
+Disallow:
