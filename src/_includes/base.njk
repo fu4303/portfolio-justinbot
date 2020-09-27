@@ -6,6 +6,7 @@
 
     <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description or site.description }}">
+
     {# Open Graph protocol #}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{{ title or site.title }}">
@@ -14,9 +15,61 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url or site.url }}">
 
-    <link href="/static/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <script src="/assets/main.js">
   </head>
   <body>
+    <header>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+          </div>
+
+            <div class="navbar-start">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Projects
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+            </div>
+
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <a href="#">
+                  <span class="icon is-large">
+                    <i class="fab fa-github fa-lg"></i>
+                  </span>
+                </a>
+                <a href="#">
+                  <span class="icon is-large">
+                    <i class="fab fa-gitlab fa-lg"></i>
+                  </span>
+                </a>
+                <a href="#">
+                  <span class="icon is-large">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                  </span>
+                </a>
+                <a href="#">
+                  <span class="icon is-large">
+                    <i class="fab fa-artstation fa-lg"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+        </div>
+      </nav>
+    </header>
     <main>
       {{ content | safe }}
     </main>
