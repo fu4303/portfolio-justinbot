@@ -15,15 +15,8 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/favicon.ico');
   config.addPassthroughCopy('src/images');
 
-  // Compiled assets.
-  config.addPassthroughCopy({'src/build': 'assets'});
-
-  // Watch compiled assets for changes
-  config.addWatchTarget('src/compiled-assets/main.css');
-  config.addWatchTarget('src/compiled-assets/main.js');
-  config.addWatchTarget('src/compiled-assets/vendor.js');
-
-  // TOOD Minify in production
+  // Compiled assets
+  config.addPassthroughCopy({ 'src/build': 'assets' });
 
   return {
     dir: {

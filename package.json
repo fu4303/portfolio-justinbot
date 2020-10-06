@@ -6,9 +6,11 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build:assets": "webpack --config webpack.config.js",
-    "build:site": "npx @11ty/eleventy",
+    "build:site": "ELEVENTY_ENV=production npx @11ty/eleventy",
     "build": "npm run clean && npm run build:assets && npm run build:site",
-    "serve": "npx @11ty/eleventy --serve"
+    "dev:assets": "webpack --config webpack.config.js",
+    "dev:site": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "dev": "npm run clean && npm run dev:assets && npm run dev:site"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@babel/core": "^7.11.6",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "babel-loader": "^8.1.0",
     "bulma": "^0.9.0",
+    "bulmaswatch": "^0.8.1",
     "css-loader": "^4.3.0",
     "js-yaml": "^3.14.0",
     "mini-css-extract-plugin": "^0.11.2",
