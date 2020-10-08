@@ -18,6 +18,14 @@ module.exports = (config) => {
   // Compiled assets
   config.addPassthroughCopy({ 'src/build': 'assets' });
 
+  if (process.env.ELEVENTY_ENV === 'development') {
+    // Watch the compiled assets
+    config.setUseGitIgnore(false);
+    config.addWatchTarget('./src/compiled-assets/main.css');
+    config.addWatchTarget('./src/compiled-assets/main.js');
+    config.addWatchTarget('./src/compiled-assets/vendor.js');
+  }
+
   return {
     dir: {
       input: 'src',

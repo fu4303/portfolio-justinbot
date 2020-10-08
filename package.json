@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf ./dist",
-    "build:assets": "webpack --config webpack.config.js",
+    "build:assets": "webpack --config webpack.config.prod.js",
     "build:site": "ELEVENTY_ENV=production npx @11ty/eleventy",
     "build": "npm run clean && npm run build:assets && npm run build:site",
-    "dev:assets": "webpack --config webpack.config.js",
+    "dev:assets": "webpack --config webpack.config.dev.js",
     "dev:site": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
-    "dev": "npm run clean && npm run dev:assets && npm run dev:site"
+    "dev": "npm run clean && npm run dev:assets & npm run dev:site"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^10.0.2",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.2.0"
   }
 }
