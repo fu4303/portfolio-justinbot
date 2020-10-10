@@ -21,6 +21,7 @@ module.exports = (config) => {
   if (process.env.ELEVENTY_ENV === 'development') {
     // Watch the compiled assets
     config.setUseGitIgnore(false);
+    config.setWatchThrottleWaitTime(200);
     config.addWatchTarget('./src/compiled-assets/main.css');
     config.addWatchTarget('./src/compiled-assets/main.js');
     config.addWatchTarget('./src/compiled-assets/vendor.js');

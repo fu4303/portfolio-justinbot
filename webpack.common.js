@@ -10,26 +10,26 @@ module.exports = {
     rules: [
       // Compiling styles
       {
-        test: /\.scss$/,
+        test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
           },
           {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              // options...
-            }
-          }
+            loader: 'postcss-loader'
+          },
         ]
       },
       // Compiling JavaScript
       {
         test: /\.js$/,
-        use: 'babel-loader',
         exclude: /node_modules/,
+        use: 'babel-loader',
       },
     ]
   },
