@@ -1,6 +1,0 @@
-# npm packages
-node_modules
-
-# generated files
-dist
-src/build
