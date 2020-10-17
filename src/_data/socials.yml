@@ -1,0 +1,16 @@
+github:
+  url: https://github.com/justinbot
+  icon: fab fa-github
+  label: GitHub
+linkedin:
+  url: https://www.linkedin.com/in/justinbot/
+  icon: fab fa-linkedin
+  label: LinkedIn
+artstation:
+  url: https://www.artstation.com/justincarlson
+  icon: fab fa-artstation
+  label: ArtStation
+email:
+  url: mailto:hey@justincarlson.io
+  icon: fas fa-envelope
+  label: hey@justincarlson.io
