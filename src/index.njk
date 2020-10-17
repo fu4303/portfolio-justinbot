@@ -2,62 +2,30 @@
 layout: base.njk
 ---
 
-<section class="hero is-medium is-primary is-bold">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <h2 class="subtitle is-5">
-            Hey, my name is
-          </h2>
-          <h1 class="title is-1">
-            Justin Carlson
-          </h1>
-          <p>
-            Most of the time I'm a <span class="has-text-weight-bold">software engineer.</span>
-          </p>
-        </div>
-      </div>
+<div class="container mx-auto px-12 md:px-48 py-12 md:py-48 min-h-screen">
+  <div class="grid gap-12">
+    <div class="leading-tight">
+      <img src="/assets/images/avatar.jpg" class="bg-orange-300 w-64 h-64 rounded-lg shadow-md" alt="Avatar">
+      <h1 class="text-6xl font-bold">Justin Carlson</h1>
+      <h2 class="text-3xl font-bold">Software Engineer</h2>
     </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <h1 class="title">Projects</h1>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <h1 class="title">Contact</h1>
-    <button class="button is-large is-primary">
-      Send me an email >
-    </button>
-  </div>
-</section>
 
-{# <div class="container">
-  <div class="columns">
-    <div class="column">
-      <p class="subtitle is-5">
-        Hey, my name is
-      </p>
-      <p class="title is-2">
-        Justin Carlson
-      </p>
-      <p>
-        Since I could use a keyboard I've been persuading computers to do cool things.
-      </p>
-      <p>
-        I'm usually a <strong>software engineer.</strong>
+    <div>
+      <h1 class="text-xl font-bold">Get in touch</h1>
+      <p class="text-xl">
+        Lick a digital envelope and send it to
+        <a href="{{ socials.email.url }}" class="font-bold hover:text-pink-800 hover:underline focus:text-pink-800 focus:underline">{{ socials.email.label }}</a>
       </p>
     </div>
-    <div class="column">
-      <p>
-        Here is the lower content.
-      </p>
-      <button class="button">
-        Button
-      </button>
+
+    <div class="flex gap-8">
+      {% for s in[socials.github, socials.linkedin, socials.artstation] %}
+        <a href="{{ s.url }}" class="hover:text-pink-800 focus:text-pink-800">
+          <i class="{{ s.icon }} fa-2x"></i>
+        </a>
+      {% endfor %}
     </div>
   </div>
-</div> #}
+</div>
+
+{% include "footer.njk" %}

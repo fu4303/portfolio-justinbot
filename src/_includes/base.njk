@@ -3,15 +3,9 @@
   <head>
     {% include "head.njk" %}
   </head>
-  <body>
-    <header>
-      {% include "nav.njk" %}
-    </header>
+  <body class="antialias bg-gray-200 text-gray-900">
     <main>
       {{ content | safe }}
     </main>
-    <footer class="footer">
-      {% include "footer.njk" %}
-    </footer>
   </body>
 </html>
