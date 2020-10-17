@@ -20,9 +20,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/justinbot/justincarlson-io/issues"
+    "url": "https://github.com/justinbot/justincarlson-io/issues"
   },
-  "homepage": "https://gitlab.com/justinbot/justincarlson-io#readme",
+  "homepage": "https://github.com/justinbot/justincarlson-io",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@babel/core": "^7.11.6",
