@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 12
+before_script:
+  npm install
+script: npm run release
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: dist
+  fqdn: www.justincarlson.io
+  target_branch: gh-pages
+  on:
+    branch: main
