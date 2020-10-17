@@ -13,7 +13,7 @@ module.exports = (config) => {
   // Pass-through files
   config.addPassthroughCopy('src/robots.txt');
   config.addPassthroughCopy('src/favicon.ico');
-  config.addPassthroughCopy('src/images');
+  config.addPassthroughCopy('src/assets/images');
 
   // Compiled assets
   config.addPassthroughCopy({ 'src/build': 'assets' });
